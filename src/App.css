@@ -1,0 +1,194 @@
+.sort__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.folders__title,
+.files__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.folders,
+.files {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+
+.folder, .download__component {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 6px;
+  border: 0.7px solid #eff0f0;
+  cursor: pointer;
+}
+.download__component {
+    background-color: #fff;
+    position: fixed;
+    right: 32px;
+    top: 16px;
+    z-index: 2;
+    width: 300px;
+    max-width: 75%;
+    transition: all 3s linear;
+}
+
+.file {
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+.file img,  .preview__modal .bottom img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.file .caption,.preview__modal .bottom .caption {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.folder svg, .file svg, .preview__modal .bottom .caption svg, .download__component svg {
+  margin-right: 16px;
+}
+
+.folder h4,
+.file h4, .preview__modal .bottom h4, .download__component h4 {
+  color: #2e3031;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+}
+
+.folder p,
+.file p , .preview__modal .bottom p, .download__component p{
+  color: #6f7376;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.mantine-Select-input,
+.mantine-Input-input {
+  background-color: #fcfcfc;
+  color: #5e6164;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+.file .file__img,  .preview__modal .bottom .file__img{
+    position: relative;
+    height: 215px;
+}
+.preview__modal .bottom .file__img{
+    position: relative;
+    height: 325px;
+}
+.file .file__img svg, .preview__modal .bottom .file__img svg{
+    margin-right: 0;
+}
+
+.file .fav, .preview__modal .bottom .fav {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.file .download {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+}
+
+.file .print {
+    position: absolute;
+    bottom: 8px;
+    left: 46px;
+}
+
+@media only screen and (min-width: 600px) {
+  .folders,
+  .files {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .folders,
+  .files {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .folders,
+  .files {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.excel__image, .pdf__image{
+    background-color: #F2F5F7;
+    display: grid;
+    place-items: center;
+    padding-block: 67.5px;
+}
+
+.preview__modal .top {
+    border-bottom: 0.8px solid #EAEBEB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+.preview__modal .top .download {
+    position: relative;
+    left: 24px;
+    cursor: pointer;
+}
+
+.preview__modal .top button {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    background-color: #DFE1E2;
+    position: relative;
+    right: 24px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.mantine-Modal-body{
+    padding: 0;
+}
+
+.preview__modal .bottom {
+    padding: 24px;
+}
+
+.preview__modal .download svg {
+    margin-right: 16px;
+}
